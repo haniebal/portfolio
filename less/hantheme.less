@@ -23,11 +23,8 @@
 }
 
 .navbar-brand {
-  padding: 12px 0;
+  padding: 0 30px;
   svg {
-    .letters {
-      fill: @text-color;
-    }
     .h {
       stroke-width: 0; 
       stroke: @brand-primary;
@@ -35,45 +32,44 @@
       stroke-dasharray: 0;
       stroke-dashoffset: 0; 
     }
-    @media (max-width: @screen-xs-min) {
-      display: none;
-    }
-  }
-  img {
-    display: none;
-    @media (max-width: @screen-xs-min) {
-      display: block;
-      margin-left: -15px;
-    } 
-  }
-  @media (max-width: @screen-xs-min) {
-    padding: 0 15px 0 45px;
-  }
+  } 
 }
 .draw-animation {
   svg {
-    .h {
-      fill: @white;
-      stroke-width: 1; 
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: draw 3s linear forwards;
-      animation-delay: 1s;
+    padding: 0;
+    .transition(0.2s ease-in all);
+    @media (max-width: @screen-xs-min) {
+      padding: 16px 30px 0 15px;
+      height: 50px;
+    }
+    .bg, polygon {
+      .transition(0.2s ease-in all);
+    }
+    &:hover {
+      margin-top: 3px;
+      .bg {
+        fill: #352F2C;
+      }
+      polygon {
+        fill: #fff;
+      }
+    }
+    .ani {
+      transform: scaleY(0.8);
+      animation: draw 1s linear forwards;
+      opacity: 0;
     }
     @keyframes draw {
-      75% {
-        stroke-dashoffset: 0;
-        fill: @white;
-        stroke-width: 1;
+      1% { 
+        transform: scaleY(0.9);
       }
-      100% {
-        fill: @brand-primary;
-        stroke-dashoffset: 0;
-        stroke-width: 0; 
+      95% { 
+        opacity: 1;
       }
-    }
-    @media (max-width: @screen-xs-min) {
-      display: none;
+      100% { 
+        transform: scaleY(1);
+        opacity: 1;
+      }
     }
   }
 }
@@ -157,13 +153,6 @@
   }
 }
 
-
-/* ------------------------------------------------ Contact --- */
-input, textarea {
-  margin: 10px 0;
-}
-
-
 /* ------------------------------------------------ Portfolio --- */
 .portfolio-item {
   margin-bottom: 25px;
@@ -181,6 +170,7 @@ input, textarea {
   margin-top: @grid-gutter-width;
   padding: @grid-gutter-width 0;
   background: @gray-darker;
+  background-image: url("../img/patterndash.png");
   color: @white;
   p {
     display: inline-block;
@@ -188,33 +178,31 @@ input, textarea {
     color: @white;
     vertical-align: middle;
     margin: 0;
+      font-size: 14px;
     i {
       background-color: @gray-dark;
       color: @white;
-      font-size: 25px;
-      width: 38px;
-      height: 38px;
+      font-size: 16px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       text-align: center;
-      line-height: 42px;
+      line-height: 35px;
       margin: 10px 15px;
       vertical-align: middle;
     }
     .fa-envelope {
-      font-size: 17px;
-      line-height: 38px;
-    }
-  }
-  .footer-nav {
-    li {
-      &:first-child {
-        margin-top: 19px;
-      }
-      margin: 24px 0;
+      font-size: 13px;
+      line-height: 31px;
     }
   }
 }
-
+.wrapper {
+  float: right;
+  @media (max-width: @screen-sm-min) {
+    float: left;
+  }
+}
 .socialCircle {
   float: left;
   margin: 15px;
