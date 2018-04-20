@@ -1,0 +1,202 @@
+<link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+<div class="container">
+  <div class="col col-1"><div class="kart kart-1"><span>e</span><span>e</span></div></div>
+  <div class="col col-2"><div class="kart kart-2"></div></div>
+  <div class="col col-3"><div class="kart kart-3"></div></div>
+  <div class="col col-4"><div class="kart kart-4"></div></div>
+  <div class="col col-5"><div class="kart kart-5"></div></div>
+  <div class="col col-6"><div class="kart kart-6"></div></div>
+  <div class="col col-mid">
+    <div class="kart kart-7"></div>
+  </div>
+  <div class="col col-8"><div class="kart kart-8"></div></div>
+  <div class="col col-9"><div class="kart kart-9"></div></div>
+  <div class="col col-10"><div class="kart kart-10"></div></div>
+  <div class="col col-11"><div class="kart kart-11"></div></div>
+  <div class="col col-12"><div class="kart kart-12"></div></div>
+  <div class="col col-13"><div class="kart kart-13"><span>e</span><span>e</span></div></div>
+  <div class="road"></div>
+  <svg>
+  </svg>
+</div>
+<p>Move mouse over window</p>
+
+<style>
+body {
+  background: #111;
+  font-family: 'Sigmar One', cursive;
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  outline: solid 1px #111;
+  overflow: hidden;
+}
+p {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-top: -30px;
+}
+.col {
+  float: left;
+  width: 45px;
+  height: 100%;
+  z-index: 1000;
+}
+.col-mid {
+  width: 60px;
+}
+.col:hover > .kart, .col:hover .kart span {
+  display: block;
+}
+.col-1:hover ~ .road {
+  margin-left: 120px;
+}
+.col-2:hover ~ .road {
+  margin-left: 100px;
+}
+.col-3:hover ~ .road {
+  margin-left: 80px;
+}
+.col-4:hover ~ .road {
+  margin-left: 60px;
+}
+.col-5:hover ~ .road {
+  margin-left: 40px;
+}
+.col-6:hover ~ .road {
+  margin-left: 20px;
+}
+.col-8:hover ~ .road {
+  margin-left: -20px;
+}
+.col-9:hover ~ .road {
+  margin-left: -40px;
+}
+.col-10:hover ~ .road {
+  margin-left: -60px;
+}
+.col-11:hover ~ .road {
+  margin-left: -80px;
+}
+.col-12:hover ~ .road {
+  margin-left: -100px;
+}
+.col-13:hover ~ .road {
+  margin-left: -120px;
+}
+span {
+  display: none;
+  position: absolute;
+  top: 23px;
+  color: yellow;
+  font-weight: bold;
+  -webkit-animation: zzz 0.8s linear infinite;
+}
+span + span {
+  -webkit-animation-delay: 0.4s;
+  opacity: 0;
+}
+@-webkit-keyframes zzz {
+  0% {
+    transform: scale(0,0) translate(0) skew(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5,1) translate(-23px, 5px) skew(38deg);
+    opacity: 0;
+  }
+}
+.kart {
+  position: absolute;
+  z-index: 1;
+  top: 180px;
+  left: 281px;
+  height: 39px;
+  width: 38px;
+  display: none;
+  background: url(Mario.png) left;
+  -webkit-animation: rijden 1s linear infinite;
+  transform: scale(1.5,1.5);
+  background-position: -0px 0;
+}
+@-webkit-keyframes rijden {
+  0% { top: 180px; }
+  50% { top: 181px; }
+  100%{ top: 180px; }
+}
+.col:hover .kart-1, .col:hover .kart-13 {
+  -webkit-animation: slippen 1s linear infinite;
+}
+@-webkit-keyframes slippen {
+  0% { left: 281px; }
+  25% { left: 280px; }
+  75% { left: 282px; }
+  100%{ left: 281px; }
+}
+.kart-1 { background-position: -0px 0; }
+.kart-2 { background-position: -50px 0; }
+.kart-3 { background-position: -100px 0; }
+.kart-4 { background-position: -150px 0; }
+.kart-5 { background-position: -200px 0; }
+.kart-6 { background-position: -250px 0; }
+.kart-7 { background-position: -300px 0; }
+.kart-8 { background-position: -250px 0; transform: scale(-1.5,1.5); }
+.kart-9 { background-position: -200px 0; transform: scale(-1.5,1.5); }
+.kart-10 { background-position: -150px 0; transform: scale(-1.5,1.5); }
+.kart-11 { background-position: -100px 0; transform: scale(-1.5,1.5); }
+.kart-12 { background-position: -50px 0; transform: scale(-1.5,1.5); }
+.kart-13 { background-position: -0px 0; transform: scale(-1.5,1.5); }
+svg {
+  position: absolute;
+  z-index: -2;
+  height: 300px;
+  width: 1200px;
+  Left: -50%;
+  top: -15px;
+  background-color: #66f;
+  background-image: url(http://i.imgur.com/dryrkvh.gif);
+  background-size: 50%;
+  -webkit-animation: scroll 14s linear infinite;
+}
+@-webkit-keyframes scroll {
+  0% { background-position: 0px; }
+  100%{ background-position: 100%; }
+}
+.road {
+  width: 1000px;
+  height: 1100px;
+  position: absolute;
+  z-index: -1;
+  left: -200px;
+  top: -390px;
+  background: url(Road.png) #313535;
+  -webkit-transform: perspective(900px) rotateX(84deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-animation: scrollvertical 1s linear infinite;
+  transition: 0.5s linear;
+}
+@-webkit-keyframes scrollvertical {
+  0% { background-position: 0 0; }
+  100%{ background-position: 0 252px; }
+}
+.wall {
+  width: 200px;
+  height: 1100px;
+  position: absolute;
+  z-index: -1;
+  left: -200px;
+  top: -390px;
+  -webkit-transform: perspective(300px) rotateY(180deg);
+  background: url(http://i.imgur.com/iYvOPYq.png) #313535;
+}
+</style>
+
+
+
+

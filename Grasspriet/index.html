@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gras</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#achtergrond').parallax("50%", 0.1);
+    $('#second').parallax("50%", 0.2);
+    $('.bg').parallax("50%", 1);
+    $('#plant').parallax("50%", 0.8);
+
+  })
+</script>
+</head>
+
+<body>
+  
+    <ul id="navigatie">
+      <li><a href="#text1" title="Next Section">About us</a></li>
+      <li><a href="#text2" title="Next Section">Home</a></li>
+      <li><a href="#text3" title="Next Section">Contact us</a></li>
+      <li><a href="#text4" title="Next Section">And more</a></li>
+    </ul>
+  <div class="wrapper">
+    <div id="achtergrond">
+    </div>
+
+    <div id="second">
+        <div class="bg"></div>
+    </div>
+
+
+    <div id="plant">
+    </div>
+
+
+    <div id="text1">
+      <h1>About us</h1>
+      <p>Lorem ipsum sem at erat accumsan et vestibulum sapien congue. Nunc lacus dui, <br/>gravida quis semper ut, facilisis id orci. Nunc eu ligula eu urna tincidunt bibendum. <br/>Pellentesque erat erat, sagittis in rhoncus a, adipiscing hendrerit augue. Donec vitae massa <br/>felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <br/>Nam ut cursus tellus. Mauris porttitor rhoncus mollis.</p>
+    </div>
+
+    <div id="text2">
+      <p>Lorem ipsum sem at erat accumsan et vestibulum sapien congue. Nunc lacus dui, <br/>gravida quis semper ut, facilisis id orci. Nunc eu ligula eu urna tincidunt bibendum. <br/>Pellentesque erat erat, sagittis in rhoncus a, adipiscing hendrerit augue. Donec vitae massa <br/>felis. Class aptent taciti sociosqu ad litora torquent per nostra, per inceptos conubia.<br/></p>
+      <h1>Home</h1>
+    </div>
+
+    <div id="text3">
+      <h1>Contact</h1>
+      <p>Neem gerust even contact met ons op!</p>
+      <p>Facebook: GrassprietFB<br/>
+      Grasspriet@info.nl<br/>
+      Telefoon: 053 260 0600<br /></p>
+    </div>
+
+    <div id="text4">
+      <h1>Something else...</h1>
+      <p>Lorem ipsum dolor sit amet, adipiscing elit. Maecenas faucibus viverra ligula in vulputate.<br/> Nunc vulputate lobortis libero a auctor. Vestibulum ipsum metus, <br/>lobortis ut egestas vel, blandit nec tortor. Suspendisse potenti. Integer arcu risus, <br/>pretium quis euismod ac, semper non magna.</p>
+    </div>
+  </div>
+</body>
+</html>
