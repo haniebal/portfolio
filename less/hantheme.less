@@ -173,8 +173,27 @@
     min-height: 100%;
     object-fit: cover;
     .transition(0.1s ease-out all);
-    &:hover {
+  }
+  &:hover {
+    .btn {
+      color: @gray;
+      background-color: lighten(@gray-lighter,2%);
+    }
+    img {
       opacity: 1;
+    }
+  }
+  .btn {
+    top: 0;
+    color: black;
+    text-transform: capitalize;
+    text-align: center;
+    width: 100%;
+    background-color: @gray-lighter;
+    border-radius: 0;
+    &:hover {
+      color: @brand-primary;
+      background-color: white;
     }
   }
 }
@@ -201,7 +220,7 @@
     color: @white;
     vertical-align: middle;
     margin: 0;
-      font-size: 14px;
+    font-size: 14px;
     i {
       background-color: @gray-dark;
       color: @white;
